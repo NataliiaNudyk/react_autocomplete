@@ -78,9 +78,9 @@ export const App: React.FC<Props> = ({ debounceDelay = 300 }) => {
 
           <div className="dropdown-menu" role="menu" data-cy="suggestions-list">
             <div className="dropdown-content">
-              {filteredPeople.map((person, i) => (
+              {filteredPeople.map(person => (
                 <div
-                  key={i}
+                  key={person.slug}
                   className="dropdown-item"
                   data-cy="suggestion-item"
                   onClick={() => handleSelect(person)}
